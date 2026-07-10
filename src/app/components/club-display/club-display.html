@@ -10,117 +10,13 @@
    </table>
     <table class="w-75 green-screen changing-line-height text-center border-light">
         <tbody>
-            <tr>
-               <th class="w-1fr"><span>0</span></th>
-               <th class="w-2fr"><span>No clubs available</span></th>
-               <th class="w-1fr"><span>0</span></th>
-            </tr>
-            <tr>
-               <th><span>.</span></th>
-               <th><span></span></th>
-               <th><span></span></th>
-            </tr>
-            <tr>
-               <th><span>.</span></th>
-               <th><span></span></th>
-               <th><span></span></th>
-            </tr>
-            <tr>
-               <th><span>.</span></th>
-               <th><span></span></th>
-               <th><span></span></th>
-            </tr>
-            <tr>
-               <th><span>.</span></th>
-               <th><span></span></th>
-               <th><span></span></th>
-            </tr>
-            <tr>
-               <th><span>.</span></th>
-               <th><span></span></th>
-               <th><span></span></th>
-            </tr>
-            <tr>
-               <th><span>.</span></th>
-               <th><span></span></th>
-               <th><span></span></th>
-            </tr>
-            <tr>
-               <th><span>.</span></th>
-               <th><span></span></th>
-               <th><span></span></th>
-            </tr>
-            <tr>
-               <th><span>.</span></th>
-               <th><span></span></th>
-               <th><span></span></th>
-            </tr>
-            <tr>
-               <th><span>.</span></th>
-               <th><span></span></th>
-               <th><span></span></th>
-            </tr>
-            <tr>
-               <th><span>.</span></th>
-               <th><span></span></th>
-               <th><span></span></th>
-            </tr>
-            <tr>
-               <th><span>.</span></th>
-               <th><span></span></th>
-               <th><span></span></th>
-            </tr>
-            <tr>
-               <th><span>.</span></th>
-               <th><span></span></th>
-               <th><span></span></th>
-            </tr>
-            <tr>
-               <th><span>.</span></th>
-               <th><span></span></th>
-               <th><span></span></th>
-            </tr>
-            <tr>
-               <th><span>.</span></th>
-               <th><span></span></th>
-               <th><span></span></th>
-            </tr>
-            <tr>
-               <th><span>.</span></th>
-               <th><span></span></th>
-               <th><span></span></th>
-            </tr>
-            <tr>
-               <th><span>.</span></th>
-               <th><span></span></th>
-               <th><span></span></th>
-            </tr>
-            <tr>
-               <th><span>.</span></th>
-               <th><span></span></th>
-               <th><span></span></th>
-            </tr>
-            <tr>
-               <th><span>.</span></th>
-               <th><span></span></th>
-               <th><span></span></th>
-            </tr>
-            <tr>
-               <th><span>.</span></th>
-               <th><span></span></th>
-               <th><span></span></th>
-            </tr>
-            <tr>
-               <th><span>.</span></th>
-               <th><span></span></th>
-               <th><span></span></th>
-            </tr>
-            <tr>
-               <th><span>.</span></th>
-               <th><span></span></th>
-               <th><span></span></th>
+            <tr *ngFor="let row of displayedRows()">
+               <th class="w-1fr"><span>{{ row.quality }}</span></th>
+               <th class="w-2fr"><span>{{ row.name }}</span></th>
+               <th class="w-1fr"><span>{{ row.avg }}</span></th>
             </tr>
         </tbody>
     </table>
-    <span class="changing-line-height">The best x of this league is y</span>
+    <span class="changing-line-height" *ngIf="bestClub()">The best club of this league is {{ bestClub() }}</span>
+    <span class="changing-line-height" *ngIf="!bestClub()">No clubs available in this league</span>
    </div>

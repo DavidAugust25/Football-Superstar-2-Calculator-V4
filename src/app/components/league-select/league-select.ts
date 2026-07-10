@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { NgFor } from '@angular/common';
+import { LeagueSelectionService } from './league-selection.service';
 
 @Component({
   selector: 'app-league-select',
@@ -10,8 +11,21 @@ import { NgFor } from '@angular/common';
   styleUrls: ['./league-select.css'],
 })
 export class LeagueSelect {
-  selectedCountry = 'austria';
-  selectedLeague = '';
+  private selectionService = inject(LeagueSelectionService);
+
+  get selectedCountry(): string {
+    return this.selectionService.selectedCountry();
+  }
+  set selectedCountry(val: string) {
+    this.selectionService.selectedCountry.set(val);
+  }
+
+  get selectedLeague(): string {
+    return this.selectionService.selectedLeague();
+  }
+  set selectedLeague(val: string) {
+    this.selectionService.selectedLeague.set(val);
+  }
 
   leaguesByCountry: Record<string, string[]> = {
     austria: ['Bundesliga', '2. Liga'],
@@ -38,6 +52,7 @@ export class LeagueSelect {
   }
 
   onLeagueChange(league: string): void {
+    this.selectedLeague = league;
     console.log(`[LeagueSelect] League changed to: "${league}"`);
   }
 
