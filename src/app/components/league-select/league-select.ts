@@ -33,7 +33,7 @@ export class LeagueSelect {
     croatia: ['SuperSport HNL', 'Prva Nogometna Liga'],
     cyprus: ['Cyprus League'],
     czech: ['Chance Liga', 'Chance Narodni Liga'],
-    denmark: ['Superliga', '1.Division', '2.Division']
+    denmark: ['Superliga', '1.Division', '2.Division'],
     england: ['Premier League', 'Championship', 'League One', 'League Two', 'National League'],
     france: ['Ligue 1', 'Ligue 2', 'Championnat National'],
     germany: ['Bundesliga', '2. Bundesliga', '3. Liga'],
