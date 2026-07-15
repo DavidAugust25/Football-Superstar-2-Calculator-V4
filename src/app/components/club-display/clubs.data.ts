@@ -76,4 +76,8 @@ export const CLUBS_BY_COUNTRY_LEAGUE: Record<string, Club[]> = {
     new Club('Šibenik', 66, 58),
     new Club('Orijent', 61, 45),
   ],
+  'scotland:League Two': [
+    new Club('Forfar Athletic', 7.3, 45)
+    new Club('Edinburg City', 7, 41)
+  ]
 };
