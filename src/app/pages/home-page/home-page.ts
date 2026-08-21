@@ -4,14 +4,12 @@ import { Footer } from '../../components/footer/footer';
 import { ReputationTable } from '../../components/reputation-table/reputation-table';
 import { StatInputs } from '../../components/stat-inputs/stat-inputs';
 import { ClubDisplay } from '../../components/club-display/club-display';
-import { MainDisplay } from '../../components/main-display/main-display';
-import { DisplayMenu } from '../../components/display-menu/display-menu';
 import { LeagueSelect } from '../../components/league-select/league-select';
-import { LoginMenu } from '../../components/login-menu/login-menu';
+import { CharacterCreator } from '../../components/character-creator/character-creator';
 
 @Component({
   selector: 'app-home-page',
-  imports: [Header, Footer, ReputationTable, StatInputs, ClubDisplay, MainDisplay, DisplayMenu, LeagueSelect, LoginMenu],
+  imports: [Header, Footer, ReputationTable, StatInputs, ClubDisplay, LeagueSelect, CharacterCreator],
   templateUrl: './home-page.html',
   styleUrl: './home-page.css',
 })

@@ -1,0 +1,32 @@
+<div id="characterDashboard" class="character-dashboard silver round-shadow gt-1rem" (click)="toggleMenu()">
+  <div class="player-picture" [style.background-image]="'url(' + faceImage() + ')'">
+    <span *ngIf="!isAdmin()">Create a character</span>
+  </div>
+  <div class="high-level-data">
+    <label for="playerName">Player Name</label>
+    <span id="playerName">{{ playerName() }}</span>
+    <label for="playerAge">Player Age</label>
+    <span id="playerAge">{{ playerAge() }}</span>
+    <table>
+      <tbody>
+        <tr>
+          <th>
+            <img class="icon-country" [src]="'/Regions/Countries/' + playerCountryCode() + '.png'" alt="" />
+            {{ playerCountry() }}
+          </th>
+          <th>
+            <img class="icon-role" *ngIf="playerPositionIcon()" [src]="'/Character/Roles/' + playerPositionIcon() + '.png'" alt="" />
+            {{ playerPosition() }}
+          </th>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+<div class="side-menu" *ngIf="menuOpen()">
+  <button type="button" class="close-btn" (click)="closeMenu()">X</button>
+  <h2>Character Creator</h2>
+  <p>Name</p>
+  <p>Age</p>
+  <p>Position</p>
+</div>

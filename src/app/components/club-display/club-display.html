@@ -2,7 +2,7 @@
     <table class="w-75 changing-line-height">
       <tbody>
         <tr>
-           <th class="w-1fr"><span id="littlefont" class="text-center">Quality</span></th>
+           <th class="w-1fr"><span id="littlefont" class="text-center">Play %</span></th>
            <th class="w-2fr"><span id="littlefont" class="text-center">Club Names</span></th>
            <th class="w-1fr"><span id="littlefont" class="text-center">Avg.</span></th>
         </tr>
@@ -10,9 +10,9 @@
    </table>
     <table class="w-75 green-screen changing-line-height text-center border-light">
         <tbody>
-            <tr *ngFor="let row of displayedRows()">
-               <th class="w-1fr"><span>{{ row.quality }}</span></th>
-               <th class="w-2fr"><span>{{ row.name }}</span></th>
+            <tr *ngFor="let row of displayedRows(); let i = index">
+               <th class="w-1fr"><span [class.quality-placeholder]="row.isPlaceholder">{{ row.quality }}</span></th>
+               <th class="w-2fr"><span>{{ displayNames()[i] }}</span></th>
                <th class="w-1fr"><span>{{ row.avg }}</span></th>
             </tr>
         </tbody>

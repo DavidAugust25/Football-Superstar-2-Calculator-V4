@@ -57,6 +57,11 @@ export class ReputationTable {
     this.selectedWeek = parseInt(target.value);
     this.updateWeeksRemaining();
   }
+
+  onRoleChange(event: Event) {
+    const target = event.target as HTMLSelectElement;
+    this.stats.selectedRole.set(target.value);
+  }
   
   updateAvailableMonths() {
     if (this.selectedYear === 2025) {

@@ -1,11 +1,8 @@
-<div id="presentation" class="hidden">
-    <app-login-menu></app-login-menu>
-</div>
 <app-header></app-header>
 <main class="w-100 h-90 d-flex justify-content-center align-items-center">
     <div class="h-100 min-w-500 d-flex justify-content-evenly align-items-center">
         <div class="d-flex flex-column h-100 justify-content-between min-w-250 w-35-3">
-            <app-reputation-table></app-reputation-table>
+            <app-character-creator></app-character-creator>
             <app-stat-inputs></app-stat-inputs>
         </div>
         <div class="d-flex flex-column h-100 justify-content-between min-w-250 w-47-0">
@@ -14,15 +11,8 @@
               <span class="w-100 p-1 black-yellow gb-1rem">The list is not fully accurate, some of these teams may have been promoted/relegated, and there are edge cases where you might be able to play or be benched regardless. Always double-check yourself.</span>
         </div>
     </div>
-    <div class="h-100 min-w-500 d-flex justify-content-center align-items-center">
-        <div class="w-80 h-80 d-flex flex-column round-shadow plastic border-light">
-            <div class="w-100 h-1fr border-light">
-                <app-display-menu></app-display-menu>
-            </div>
-            <div class="w-100 flex-grow-1 border-light">
-                <app-main-display></app-main-display>
-            </div>
-        </div>
+    <div class="h-100 min-w-500 d-flex justify-content-evenly align-items-center">
+            <app-reputation-table></app-reputation-table>
     </div>
 </main>
 <app-footer></app-footer>

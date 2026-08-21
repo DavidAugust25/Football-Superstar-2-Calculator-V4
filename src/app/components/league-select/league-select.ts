@@ -51,11 +51,12 @@ export class LeagueSelect {
     russia: ['Premier Liga', '1.Division'],
     scotland: ['Premiership', 'Championship', 'League One', 'League Two'],
     serbia: ['Super Liga Srbije', 'Prva liga Srbije'],
-    spain: ['LaLiga', 'LaLiga'],
+    spain: ['LaLiga', 'LaLiga 2'],
     sweden: ['Allsvenskan', 'Superettan'],
     switzerland: ['Super League', 'Challenge League', 'Promotion League'],
     turkey: ['Super Lig', '1.Lig'],
     ukraine: ['Premier Liga', 'Persha Liga'],
+    international: ['Euros', 'World Cup',],
   };
 
   constructor() {

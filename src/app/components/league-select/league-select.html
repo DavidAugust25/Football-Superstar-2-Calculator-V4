@@ -1,40 +1,26 @@
 <div class="w-100 d-flex flex-column justify-content-center align-items-center plastic border-light round-shadow-sm gt-1rem p-3-tb">
     <div class="d-flex w-75 border-light">
-        <table class="w-50 silver text-center ">
+        <table class="w-100 silver text-center border-table">
             <tbody>
                 <tr>
                     <th><span>Weeks Remaining</span></th>
+                    <th class="green-screen-column"><span>{{ leagueService.weeksRemaining() }}</span></th>
                 </tr>
                 <tr>
                     <th><span>XP until retirement</span></th>
+                    <th class="green-screen-column"><span>{{ formatNumber(leagueService.xpUntilRetirement()) }}</span></th>
                 </tr>
                 <tr>
                     <th><span>Earnings per week</span></th>
+                    <th class="green-screen-column"><span>₤    </span><span>{{ formatNumber(leagueService.earningsPerWeek()) }}</span></th>
                 </tr>
                 <tr>
                     <th><span>Earnings til retirement</span></th>
+                    <th class="green-screen-column"><span>₤    </span><span>{{ formatNumber(leagueService.earningsUntilRetirement()) }}</span></th>
                 </tr>
                 <tr>
                     <th><span>Expected reputation</span></th>
-                </tr>
-            </tbody>
-        </table>
-        <table class="w-50 green-screen">
-            <tbody>
-                <tr>
-                    <th><span>{{ leagueService.weeksRemaining() }}</span></th>
-                </tr>
-                <tr>
-                    <th><span>{{ formatNumber(leagueService.xpUntilRetirement()) }}</span></th>
-                </tr>
-                <tr>
-                    <th><span>₤    </span><span>{{ formatNumber(leagueService.earningsPerWeek()) }}</span></th>
-                </tr>
-                <tr>
-                    <th><span>₤    </span><span>{{ formatNumber(leagueService.earningsUntilRetirement()) }}</span></th>
-                </tr>
-                <tr>
-                    <th><span>{{ leagueService.expectedReputation() }}</span></th>
+                    <th class="green-screen-column"><span>{{ leagueService.expectedReputation() }}</span></th>
                 </tr>
             </tbody>
         </table>
@@ -72,6 +58,7 @@
                       <option value="switzerland">Switzerland</option>
                       <option value="turkey">Turkey</option>
                       <option value="ukraine">Ukraine</option>
+                      <option value="international">International</option>
                     </select>
                 </th>
                 <th class="w-50">

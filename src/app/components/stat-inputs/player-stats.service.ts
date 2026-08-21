@@ -2,10 +2,11 @@ import { Injectable, signal, computed } from '@angular/core';
 
 @Injectable({ providedIn: 'root' })
 export class PlayerStatsService {
-  readonly STAT_COUNT = 26;
+  readonly STAT_COUNT = 30;
 
   ratings = signal<number[]>(Array(this.STAT_COUNT).fill(50));
   stars = signal<number[]>(Array(this.STAT_COUNT).fill(0));
+  selectedRole = signal<string>('AT');
 
   averageRating = computed(() => {
     const r = this.ratings();
@@ -20,8 +21,11 @@ export class PlayerStatsService {
     return counts;
   });
 
-  updateFromInputs(ratings: number[], stars: number[]): void {
+  updateRatings(ratings: number[]): void {
     this.ratings.set(ratings);
+  }
+
+  updateStars(stars: number[]): void {
     this.stars.set(stars);
   }
 }

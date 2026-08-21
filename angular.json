@@ -19,8 +19,13 @@
             ],
             "tsConfig": "tsconfig.app.json",
             "styles": [
-              "src/styles.css",
-              "node_modules/bootstrap/dist/css/bootstrap.min.css"
+              "src/styles/variables.css",
+              "src/styles/reset.css",
+              "src/styles/base.css",
+              "src/styles/materials.css",
+              "src/styles/utilities.css",
+              "src/styles/tables.css",
+              "src/styles/responsive.css"
             ],
             "assets": [
               {
@@ -34,7 +39,7 @@
             "server": "src/main.server.ts",
             "outputMode": "server",
             "security": {
-              "allowedHosts": []
+              "allowedHosts": ["localhost", "127.0.0.1", "19.110.15.115", "10.0.0.104"]
             },
             "ssr": {
               "entry": "src/server.ts"
@@ -45,7 +50,7 @@
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "500kB",
+                  "maximumWarning": "600kB",
                   "maximumError": "1MB"
                 },
                 {
@@ -94,8 +99,13 @@
               }
             ],
             "styles": [
-              "src/styles.css",
-              "node_modules/bootstrap/dist/css/bootstrap.min.css"
+              "src/styles/variables.css",
+              "src/styles/reset.css",
+              "src/styles/base.css",
+              "src/styles/materials.css",
+              "src/styles/utilities.css",
+              "src/styles/tables.css",
+              "src/styles/responsive.css"
             ]
           }
         },

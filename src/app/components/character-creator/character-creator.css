@@ -1,0 +1,107 @@
+@import url(../../../styles/variables.css);
+@import url(../../../styles/materials.css);
+.character-dashboard {
+  width: 100%;
+  height: calc(var(--table-line-height) * 5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--dark-grey);
+  cursor: pointer;
+  user-select: none;
+  box-sizing: border-box;
+}
+
+.player-picture {
+  color: var(--light-grey);
+  aspect-ratio: 1/1;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: calc(100% - 1vh);
+  margin: 0.5vh;
+  border-radius: var(--radius-sm);
+  border: 2px solid var(--dark-grey);
+  box-sizing: border-box;
+  background-color: black;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.player-picture span {
+  text-align: center;
+  font-size: calc(var(--table-font-size) * 1.2);
+}
+
+.high-level-data {
+  display: flex;
+  flex-direction: column;
+  font-size: calc(var(--table-font-size) * 1.2);
+  margin: 0.5vh;
+  flex-grow: 1;
+}
+
+.high-level-data label {
+  font-size: calc(var(--table-font-size) * 0.7);
+}
+
+.high-level-data table {
+  width: 100%;
+  table-layout: fixed;
+  align-items: center;
+  justify-content: center;
+}
+
+.side-menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 300px;
+  background-color: var(--bg-green);
+  color: var(--light-grey);
+  border-left: 2.5px solid var(--light-grey);
+  padding: 1rem;
+  box-sizing: border-box;
+  z-index: 1000;
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.side-menu .close-btn {
+  align-self: flex-end;
+  background: transparent;
+  border: 1px solid var(--light-grey);
+  color: var(--light-grey);
+  cursor: pointer;
+  width: 28px;
+  height: 28px;
+  font-weight: bold;
+  font-size: 1rem;
+  line-height: 1;
+}
+
+.side-menu h2 {
+  margin: 0;
+  border-bottom: 1px solid var(--light-grey);
+  padding-bottom: 0.5rem;
+}
+
+.side-menu p {
+  margin: 0;
+  border: 1px solid var(--light-grey);
+  border-radius: var(--radius-sm);
+  padding: 0.5rem;
+  cursor: pointer;
+}
+
+.icon-country,
+.icon-role {
+  height: calc(var(--table-font-size) * 1.2);
+  vertical-align: middle;
+  margin-right: 0.3em;
+}

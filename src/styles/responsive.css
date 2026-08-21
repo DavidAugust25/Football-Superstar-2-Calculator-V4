@@ -1,0 +1,69 @@
+@media (max-width: 1080px) {
+  html,
+  body {
+    overflow: visible;
+    overflow-y: auto;
+    height: 140%;
+  }
+  .app-header {
+    width: 100%;
+  }
+  .w-header {
+    font-size: 1.4vw;
+  }
+  .header-div {
+    display: none;
+  }
+  .h-5 {
+    height: 4%;
+  }
+  .h-90 {
+    flex-direction: column;
+    overflow-y: auto;
+    height: 92%;
+  }
+  .min-w-500 {
+    width: 100%;
+  }
+
+  .min-w-250 {
+    display: block;
+    overflow: hidden;
+  }
+
+  .border-table {
+    border-collapse: collapse;
+    font-size: 12px;
+  }
+
+  .min-w-250 th,
+  .min-w-250 td {
+    text-align: center;
+  }
+
+  .min-w-250 input {
+    width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+    font-size: 8px;
+  }
+}
+
+@media all and (display-mode: fullscreen) and (min-width: 1081px) {
+  .border-table tr,
+  .border-table th,
+  .border-table td,
+  .border-table span,
+  .border-table select {
+    line-height: var(--table-line-height-fullscreen);
+  }
+  .green-screen th {
+    line-height: var(--table-line-height-fullscreen);
+  }
+  .w-header {
+    font-size: 0.7vw;
+  }
+  .changing-line-height {
+    line-height: var(--table-line-height-fullscreen);
+  }
+}

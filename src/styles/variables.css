@@ -1,0 +1,22 @@
+:root {
+  --table-font-size: 1.4vh;
+  --table-margin: 3.5vh;
+  --dark-grey: #434343;
+  --light-grey: #d9d9d9;
+  --accent-yellow: #f1c232;
+  --danger-red: #cc0000;
+  --bg-green: #274e13;
+  --table-line-height: calc(var(--table-font-size) * 1.46);
+  --table-line-height-fullscreen: 2.2vh;
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
+  --green-row-odd: #b6d7a8;
+  --green-row-even: #93c47d;
+  --silver-band-1: #d7d7d7;
+  --silver-band-2: #c3c3c3;
+  --silver-band-3: #cccccc;
+  --silver-band-4: #c6c6c6;
+  --silver-cycle: 100px;
+  --silver-angle: 127deg;
+}

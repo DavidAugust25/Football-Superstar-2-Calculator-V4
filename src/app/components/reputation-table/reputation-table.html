@@ -15,14 +15,14 @@
                     </tr>
                     <tr>
                       <th class="red-metal">Position</th>
-                      <th><select name="position" id="playerPosition">
-                        <option value="striker">Striker</option>
-                        <option value="cmidfilder">C. Midfielder</option>
-                        <option value="lmidfilder">L. Midfielder</option>
-                        <option value="rmidfilder">R. Midfielder</option>
-                        <option value="cdefender"> C. Defender</option>
-                        <option value="ldefender">L. Defender</option>
-                        <option value="rdefender">R. Defender</option>                        
+                      <th><select name="position" id="playerPosition" (change)="onRoleChange($event)">
+                        <option value="AT" [selected]="stats.selectedRole() === 'AT'">Striker</option>
+                        <option value="MC" [selected]="stats.selectedRole() === 'MC'">C. Midfielder</option>
+                        <option value="ML" [selected]="stats.selectedRole() === 'ML'">L. Midfielder</option>
+                        <option value="MR" [selected]="stats.selectedRole() === 'MR'">R. Midfielder</option>
+                        <option value="DC" [selected]="stats.selectedRole() === 'DC'">C. Defender</option>
+                        <option value="DL" [selected]="stats.selectedRole() === 'DL'">L. Defender</option>
+                        <option value="DR" [selected]="stats.selectedRole() === 'DR'">R. Defender</option>                        
                       </select></th>
                     </tr>
                    </tbody>

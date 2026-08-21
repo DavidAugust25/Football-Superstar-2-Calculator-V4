@@ -1,3 +1,4 @@
     <footer class="w-100 h-5 d-flex justify-content-center align-items-center">
-        <button>Hello There</button>
+        <button (click)="toggleScramble()">{{ scrambleEnabled() ? 'Animations: On' : 'Animations: Off' }}</button>
+        <button (click)="toggleAdmin()">{{ isAdmin() ? 'Admin Mode' : 'Default Mode' }}</button>
     </footer>

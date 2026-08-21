@@ -7,7 +7,8 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "serve:ssr:FootballSuperstarCalculator": "node dist/FootballSuperstarCalculator/server/server.mjs"
+    "serve:ssr:FootballSuperstarCalculator": "node dist/FootballSuperstarCalculator/server/server.mjs",
+    "compress:dataset": "node scripts/compress-club-dataset.mjs"
   },
   "prettier": {
     "printWidth": 100,
@@ -31,7 +32,6 @@
     "@angular/platform-server": "^20.3.0",
     "@angular/router": "^20.3.0",
     "@angular/ssr": "^20.3.27",
-    "bootstrap": "^5.3.8",
     "express": "^5.1.0",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
@@ -52,6 +52,7 @@
     "karma-coverage": "~2.2.0",
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.1.0",
+    "prettier": "^3.9.6",
     "typescript": "~5.9.2"
   }
 }

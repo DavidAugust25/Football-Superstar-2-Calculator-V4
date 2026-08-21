@@ -1,0 +1,144 @@
+.app-header {
+  width: 50%;
+  filter: drop-shadow(var(--shadow));
+}
+
+.u-none {
+  user-select: none;
+}
+
+.text-center {
+  text-align: center;
+  font-size: 0.85rem;
+}
+
+.changing-line-height {
+  line-height: var(--table-line-height);
+}
+
+.p-3-tb {
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
+
+.min-w-500 {
+  width: 50%;
+  min-width: 500px;
+}
+
+.w-1fr {
+  width: 16.67%;
+}
+
+.w-35-3 {
+  width: 35.3%;
+  min-width: 188.5px;
+  padding-left: 6px;
+  padding-right: 6px;
+}
+
+.w-47-0 {
+  width: 47%;
+  min-width: 247px;
+  padding-left: 6px;
+  padding-right: 6px;
+}
+
+.w-2fr {
+  width: 66.7%;
+}
+
+.w-header {
+  width: 88.2%;
+  min-width: 465px;
+  font-size: 0.8vw;
+  height: 60%;
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+}
+
+.fr7 {
+  width: 58.33%;
+}
+
+.h-5 {
+  height: 5%;
+}
+
+.h-90 {
+  height: 90%;
+}
+
+.gt-1rem {
+  margin-top: var(--table-margin);
+}
+
+.gb-1rem {
+  margin-bottom: var(--table-margin);
+}
+
+/* Bootstrap replacements — Bootstrap was removed from the build,
+   so the few utility classes the templates use are defined here. */
+.d-flex {
+  display: flex;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.w-25 {
+  width: 25%;
+}
+
+.w-50 {
+  width: 50%;
+}
+
+.w-75 {
+  width: 75%;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+.h-100 {
+  height: 100%;
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+.align-items-end {
+  align-items: flex-end;
+}
+
+.justify-content-center {
+  justify-content: center;
+}
+
+.justify-content-between {
+  justify-content: space-between;
+}
+
+.justify-content-evenly {
+  justify-content: space-evenly;
+}
+
+.p-1 {
+  padding: 0.25rem;
+}
+
+.border-end-0 {
+  border-right: 0;
+}
+
+.border-top-0 {
+  border-top: 0;
+}
+
+.border-bottom-0 {
+  border-bottom: 0;
+}

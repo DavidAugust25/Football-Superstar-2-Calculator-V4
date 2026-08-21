@@ -1,4 +1,4 @@
-<form class="silver round-shadow gb-1rem" (input)="onInput()">
+<form class="silver round-shadow gb-1rem" (keydown.enter)="onEnter($event)">
 <table class="w-100 border-table">
       <thead>
         <tr>
@@ -11,235 +11,271 @@
         <tr>
           <td><span>Acceleration</span></td>
           <td>
-            <input type="number" value="50" id="Stat0" class="statInput align-items-center" min="1" max="99" onchange="if(this.value > 99) this.value = 99; if(this.value < 1) this.value = 1;" oninput="this.value = this.value.replace(/[^0-9]/g, '')">
+            <input type="number" value="50" id="Stat0" class="statInput align-items-center" min="3" max="99" (blur)="onRatingBlur()" onchange="if(this.value > 99) this.value = 99; if(this.value < 3) this.value = 3;" oninput="this.value = this.value.replace(/[^0-9]/g, '')">
           </td>
           <td>
-            <input type="number" value="0" id="Star0" class="statInput" min="0" max="4" onchange="if(this.value > 4) this.value = 4; if(this.value < 0) this.value = 0;" oninput="this.value = this.value.replace(/[^0-9]/g, '')">
+            <input type="number" value="0" id="Star0" class="statInput" min="0" max="4" (input)="onStarInput()" (change)="onStarInput()" onchange="if(this.value > 4) this.value = 4; if(this.value < 0) this.value = 0;" oninput="this.value = this.value.replace(/[^0-9]/g, '')">
           </td>
         </tr>
         <tr>
           <td><span>Agility</span></td>
           <td>
-            <input type="number" value="50" id="Stat1" class="statInput align-items-center" min="1" max="99" onchange="if(this.value > 99) this.value = 99; if(this.value < 1) this.value = 1;" oninput="this.value = this.value.replace(/[^0-9]/g, '')">
+            <input type="number" value="50" id="Stat1" class="statInput align-items-center" min="3" max="99" (blur)="onRatingBlur()" onchange="if(this.value > 99) this.value = 99; if(this.value < 3) this.value = 3;" oninput="this.value = this.value.replace(/[^0-9]/g, '')">
           </td>
           <td>
-            <input type="number" value="0" id="Star1" class="statInput" min="0" max="4" onchange="if(this.value > 4) this.value = 4; if(this.value < 0) this.value = 0;" oninput="this.value = this.value.replace(/[^0-9]/g, '')">
+            <input type="number" value="0" id="Star1" class="statInput" min="0" max="4" (input)="onStarInput()" (change)="onStarInput()" onchange="if(this.value > 4) this.value = 4; if(this.value < 0) this.value = 0;" oninput="this.value = this.value.replace(/[^0-9]/g, '')">
           </td>
         </tr>
         <tr>
           <td><span>Anticipation</span></td>
           <td>
-            <input type="number" value="50" id="Stat2" class="statInput align-items-center" min="1" max="99" onchange="if(this.value > 99) this.value = 99; if(this.value < 1) this.value = 1;" oninput="this.value = this.value.replace(/[^0-9]/g, '')">
+            <input type="number" value="50" id="Stat2" class="statInput align-items-center" min="3" max="99" (blur)="onRatingBlur()" onchange="if(this.value > 99) this.value = 99; if(this.value < 3) this.value = 3;" oninput="this.value = this.value.replace(/[^0-9]/g, '')">
           </td>
           <td>
-            <input type="number" value="0" id="Star2" class="statInput" min="0" max="4" onchange="if(this.value > 4) this.value = 4; if(this.value < 0) this.value = 0;" oninput="this.value = this.value.replace(/[^0-9]/g, '')">
+            <input type="number" value="0" id="Star2" class="statInput" min="0" max="4" (input)="onStarInput()" (change)="onStarInput()" onchange="if(this.value > 4) this.value = 4; if(this.value < 0) this.value = 0;" oninput="this.value = this.value.replace(/[^0-9]/g, '')">
           </td>
         </tr>
         <tr>
           <td><span>Bravery</span></td>
           <td>
-            <input type="number" value="50" id="Stat3" class="statInput align-items-center" min="1" max="99" onchange="if(this.value > 99) this.value = 99; if(this.value < 1) this.value = 1;" oninput="this.value = this.value.replace(/[^0-9]/g, '')">
+            <input type="number" value="50" id="Stat3" class="statInput align-items-center" min="3" max="99" (blur)="onRatingBlur()" onchange="if(this.value > 99) this.value = 99; if(this.value < 3) this.value = 3;" oninput="this.value = this.value.replace(/[^0-9]/g, '')">
           </td>
           <td>
-            <input type="number" value="0" id="Star3" class="statInput" min="0" max="4" onchange="if(this.value > 4) this.value = 4; if(this.value < 0) this.value = 0;" oninput="this.value = this.value.replace(/[^0-9]/g, '')">
+            <input type="number" value="0" id="Star3" class="statInput" min="0" max="4" (input)="onStarInput()" (change)="onStarInput()" onchange="if(this.value > 4) this.value = 4; if(this.value < 0) this.value = 0;" oninput="this.value = this.value.replace(/[^0-9]/g, '')">
           </td>
         </tr>
         <tr>
           <td><span>Chest Control</span></td>
           <td>
-            <input type="number" value="50" id="Stat4" class="statInput align-items-center" min="1" max="99" onchange="if(this.value > 99) this.value = 99; if(this.value < 1) this.value = 1;" oninput="this.value = this.value.replace(/[^0-9]/g, '')">
+            <input type="number" value="50" id="Stat4" class="statInput align-items-center" min="3" max="99" (blur)="onRatingBlur()" onchange="if(this.value > 99) this.value = 99; if(this.value < 3) this.value = 3;" oninput="this.value = this.value.replace(/[^0-9]/g, '')">
           </td>
           <td>
-            <input type="number" value="0" id="Star4" class="statInput" min="0" max="4" onchange="if(this.value > 4) this.value = 4; if(this.value < 0) this.value = 0;" oninput="this.value = this.value.replace(/[^0-9]/g, '')">
+            <input type="number" value="0" id="Star4" class="statInput" min="0" max="4" (input)="onStarInput()" (change)="onStarInput()" onchange="if(this.value > 4) this.value = 4; if(this.value < 0) this.value = 0;" oninput="this.value = this.value.replace(/[^0-9]/g, '')">
           </td>
         </tr>
         <tr>
           <td><span>Closing Down</span></td>
           <td>
-            <input type="number" value="50" id="Stat5" class="statInput align-items-center" min="1" max="99" onchange="if(this.value > 99) this.value = 99; if(this.value < 1) this.value = 1;" oninput="this.value = this.value.replace(/[^0-9]/g, '')">
+            <input type="number" value="50" id="Stat5" class="statInput align-items-center" min="3" max="99" (blur)="onRatingBlur()" onchange="if(this.value > 99) this.value = 99; if(this.value < 3) this.value = 3;" oninput="this.value = this.value.replace(/[^0-9]/g, '')">
           </td>
           <td>
-            <input type="number" value="0" id="Star5" class="statInput" min="0" max="4" onchange="if(this.value > 4) this.value = 4; if(this.value < 0) this.value = 0;" oninput="this.value = this.value.replace(/[^0-9]/g, '')">
+            <input type="number" value="0" id="Star5" class="statInput" min="0" max="4" (input)="onStarInput()" (change)="onStarInput()" onchange="if(this.value > 4) this.value = 4; if(this.value < 0) this.value = 0;" oninput="this.value = this.value.replace(/[^0-9]/g, '')">
           </td>
         </tr>
         <tr>
           <td><span>Composure</span></td>
           <td>
-            <input type="number" value="50" id="Stat6" class="statInput align-items-center" min="1" max="99" onchange="if(this.value > 99) this.value = 99; if(this.value < 1) this.value = 1;" oninput="this.value = this.value.replace(/[^0-9]/g, '')">
+            <input type="number" value="50" id="Stat6" class="statInput align-items-center" min="3" max="99" (blur)="onRatingBlur()" onchange="if(this.value > 99) this.value = 99; if(this.value < 3) this.value = 3;" oninput="this.value = this.value.replace(/[^0-9]/g, '')">
           </td>
           <td>
-            <input type="number" value="0" id="Star6" class="statInput" min="0" max="4" onchange="if(this.value > 4) this.value = 4; if(this.value < 0) this.value = 0;" oninput="this.value = this.value.replace(/[^0-9]/g, '')">
+            <input type="number" value="0" id="Star6" class="statInput" min="0" max="4" (input)="onStarInput()" (change)="onStarInput()" onchange="if(this.value > 4) this.value = 4; if(this.value < 0) this.value = 0;" oninput="this.value = this.value.replace(/[^0-9]/g, '')">
           </td>
         </tr>
         <tr>
           <td><span>Concentration</span></td>
           <td>
-            <input type="number" value="50" id="Stat7" class="statInput align-items-center" min="1" max="99" onchange="if(this.value > 99) this.value = 99; if(this.value < 1) this.value = 1;" oninput="this.value = this.value.replace(/[^0-9]/g, '')">
+            <input type="number" value="50" id="Stat7" class="statInput align-items-center" min="3" max="99" (blur)="onRatingBlur()" onchange="if(this.value > 99) this.value = 99; if(this.value < 3) this.value = 3;" oninput="this.value = this.value.replace(/[^0-9]/g, '')">
           </td>
           <td>
-            <input type="number" value="0" id="Star7" class="statInput" min="0" max="4" onchange="if(this.value > 4) this.value = 4; if(this.value < 0) this.value = 0;" oninput="this.value = this.value.replace(/[^0-9]/g, '')">
+            <input type="number" value="0" id="Star7" class="statInput" min="0" max="4" (input)="onStarInput()" (change)="onStarInput()" onchange="if(this.value > 4) this.value = 4; if(this.value < 0) this.value = 0;" oninput="this.value = this.value.replace(/[^0-9]/g, '')">
           </td>
         </tr>
         <tr>
           <td><span>Confidence</span></td>
           <td>
-            <input type="number" value="50" id="Stat8" class="statInput align-items-center" min="1" max="99" onchange="if(this.value > 99) this.value = 99; if(this.value < 1) this.value = 1;" oninput="this.value = this.value.replace(/[^0-9]/g, '')">
+            <input type="number" value="50" id="Stat8" class="statInput align-items-center" min="3" max="99" (blur)="onRatingBlur()" onchange="if(this.value > 99) this.value = 99; if(this.value < 3) this.value = 3;" oninput="this.value = this.value.replace(/[^0-9]/g, '')">
           </td>
           <td>
-            <input type="number" value="0" id="Star8" class="statInput" min="0" max="4" onchange="if(this.value > 4) this.value = 4; if(this.value < 0) this.value = 0;" oninput="this.value = this.value.replace(/[^0-9]/g, '')">
+            <input type="number" value="0" id="Star8" class="statInput" min="0" max="4" (input)="onStarInput()" (change)="onStarInput()" onchange="if(this.value > 4) this.value = 4; if(this.value < 0) this.value = 0;" oninput="this.value = this.value.replace(/[^0-9]/g, '')">
           </td>
         </tr>
         <tr>
           <td><span>Consistency</span></td>
           <td>
-            <input type="number" value="50" id="Stat9" class="statInput align-items-center" min="1" max="99" onchange="if(this.value > 99) this.value = 99; if(this.value < 1) this.value = 1;" oninput="this.value = this.value.replace(/[^0-9]/g, '')">
+            <input type="number" value="50" id="Stat9" class="statInput align-items-center" min="3" max="99" (blur)="onRatingBlur()" onchange="if(this.value > 99) this.value = 99; if(this.value < 3) this.value = 3;" oninput="this.value = this.value.replace(/[^0-9]/g, '')">
           </td>
           <td>
-            <input type="number" value="0" id="Star9" class="statInput" min="0" max="4" onchange="if(this.value > 4) this.value = 4; if(this.value < 0) this.value = 0;" oninput="this.value = this.value.replace(/[^0-9]/g, '')">
+            <input type="number" value="0" id="Star9" class="statInput" min="0" max="4" (input)="onStarInput()" (change)="onStarInput()" onchange="if(this.value > 4) this.value = 4; if(this.value < 0) this.value = 0;" oninput="this.value = this.value.replace(/[^0-9]/g, '')">
           </td>
         </tr>
         <tr>
           <td><span>Control</span></td>
           <td>
-            <input type="number" value="50" id="Stat10" class="statInput align-items-center" min="1" max="99" onchange="if(this.value > 99) this.value = 99; if(this.value < 1) this.value = 1;" oninput="this.value = this.value.replace(/[^0-9]/g, '')">
+            <input type="number" value="50" id="Stat10" class="statInput align-items-center" min="3" max="99" (blur)="onRatingBlur()" onchange="if(this.value > 99) this.value = 99; if(this.value < 3) this.value = 3;" oninput="this.value = this.value.replace(/[^0-9]/g, '')">
           </td>
           <td>
-            <input type="number" value="0" id="Star10" class="statInput" min="0" max="4" onchange="if(this.value > 4) this.value = 4; if(this.value < 0) this.value = 0;" oninput="this.value = this.value.replace(/[^0-9]/g, '')">
+            <input type="number" value="0" id="Star10" class="statInput" min="0" max="4" (input)="onStarInput()" (change)="onStarInput()" onchange="if(this.value > 4) this.value = 4; if(this.value < 0) this.value = 0;" oninput="this.value = this.value.replace(/[^0-9]/g, '')">
           </td>
         </tr>
         <tr>
           <td><span>Creativity</span></td>
           <td>
-            <input type="number" value="50" id="Stat11" class="statInput align-items-center" min="1" max="99" onchange="if(this.value > 99) this.value = 99; if(this.value < 1) this.value = 1;" oninput="this.value = this.value.replace(/[^0-9]/g, '')">
+            <input type="number" value="50" id="Stat11" class="statInput align-items-center" min="3" max="99" (blur)="onRatingBlur()" onchange="if(this.value > 99) this.value = 99; if(this.value < 3) this.value = 3;" oninput="this.value = this.value.replace(/[^0-9]/g, '')">
           </td>
           <td>
-            <input type="number" value="0" id="Star11" class="statInput" min="0" max="4" onchange="if(this.value > 4) this.value = 4; if(this.value < 0) this.value = 0;" oninput="this.value = this.value.replace(/[^0-9]/g, '')">
+            <input type="number" value="0" id="Star11" class="statInput" min="0" max="4" (input)="onStarInput()" (change)="onStarInput()" onchange="if(this.value > 4) this.value = 4; if(this.value < 0) this.value = 0;" oninput="this.value = this.value.replace(/[^0-9]/g, '')">
           </td>
         </tr>
         <tr>
           <td><span>Determination</span></td>
           <td>
-            <input type="number" value="50" id="Stat12" class="statInput align-items-center" min="1" max="99" onchange="if(this.value > 99) this.value = 99; if(this.value < 1) this.value = 1;" oninput="this.value = this.value.replace(/[^0-9]/g, '')">
+            <input type="number" value="50" id="Stat12" class="statInput align-items-center" min="3" max="99" (blur)="onRatingBlur()" onchange="if(this.value > 99) this.value = 99; if(this.value < 3) this.value = 3;" oninput="this.value = this.value.replace(/[^0-9]/g, '')">
           </td>
           <td>
-            <input type="number" value="0" id="Star12" class="statInput" min="0" max="4" onchange="if(this.value > 4) this.value = 4; if(this.value < 0) this.value = 0;" oninput="this.value = this.value.replace(/[^0-9]/g, '')">
+            <input type="number" value="0" id="Star12" class="statInput" min="0" max="4" (input)="onStarInput()" (change)="onStarInput()" onchange="if(this.value > 4) this.value = 4; if(this.value < 0) this.value = 0;" oninput="this.value = this.value.replace(/[^0-9]/g, '')">
           </td>
         </tr>
         <tr>
           <td><span>Dribbling</span></td>
           <td>
-            <input type="number" value="50" id="Stat13" class="statInput align-items-center" min="1" max="99" onchange="if(this.value > 99) this.value = 99; if(this.value < 1) this.value = 1;" oninput="this.value = this.value.replace(/[^0-9]/g, '')">
+            <input type="number" value="50" id="Stat13" class="statInput align-items-center" min="3" max="99" (blur)="onRatingBlur()" onchange="if(this.value > 99) this.value = 99; if(this.value < 3) this.value = 3;" oninput="this.value = this.value.replace(/[^0-9]/g, '')">
           </td>
           <td>
-            <input type="number" value="0" id="Star13" class="statInput" min="0" max="4" onchange="if(this.value > 4) this.value = 4; if(this.value < 0) this.value = 0;" oninput="this.value = this.value.replace(/[^0-9]/g, '')">
+            <input type="number" value="0" id="Star13" class="statInput" min="0" max="4" (input)="onStarInput()" (change)="onStarInput()" onchange="if(this.value > 4) this.value = 4; if(this.value < 0) this.value = 0;" oninput="this.value = this.value.replace(/[^0-9]/g, '')">
           </td>
         </tr>
         <tr>
           <td><span>Heading</span></td>
           <td>
-            <input type="number" value="50" id="Stat14" class="statInput align-items-center" min="1" max="99" onchange="if(this.value > 99) this.value = 99; if(this.value < 1) this.value = 1;" oninput="this.value = this.value.replace(/[^0-9]/g, '')">
+            <input type="number" value="50" id="Stat14" class="statInput align-items-center" min="3" max="99" (blur)="onRatingBlur()" onchange="if(this.value > 99) this.value = 99; if(this.value < 3) this.value = 3;" oninput="this.value = this.value.replace(/[^0-9]/g, '')">
           </td>
           <td>
-            <input type="number" value="0" id="Star14" class="statInput" min="0" max="4" onchange="if(this.value > 4) this.value = 4; if(this.value < 0) this.value = 0;" oninput="this.value = this.value.replace(/[^0-9]/g, '')">
+            <input type="number" value="0" id="Star14" class="statInput" min="0" max="4" (input)="onStarInput()" (change)="onStarInput()" onchange="if(this.value > 4) this.value = 4; if(this.value < 0) this.value = 0;" oninput="this.value = this.value.replace(/[^0-9]/g, '')">
           </td>
         </tr>
         <tr>
           <td><span>Jumping</span></td>
           <td>
-            <input type="number" value="50" id="Stat15" class="statInput align-items-center" min="1" max="99" onchange="if(this.value > 99) this.value = 99; if(this.value < 1) this.value = 1;" oninput="this.value = this.value.replace(/[^0-9]/g, '')">
+            <input type="number" value="50" id="Stat15" class="statInput align-items-center" min="3" max="99" (blur)="onRatingBlur()" onchange="if(this.value > 99) this.value = 99; if(this.value < 3) this.value = 3;" oninput="this.value = this.value.replace(/[^0-9]/g, '')">
           </td>
           <td>
-            <input type="number" value="0" id="Star15" class="statInput" min="0" max="4" onchange="if(this.value > 4) this.value = 4; if(this.value < 0) this.value = 0;" oninput="this.value = this.value.replace(/[^0-9]/g, '')">
+            <input type="number" value="0" id="Star15" class="statInput" min="0" max="4" (input)="onStarInput()" (change)="onStarInput()" onchange="if(this.value > 4) this.value = 4; if(this.value < 0) this.value = 0;" oninput="this.value = this.value.replace(/[^0-9]/g, '')">
           </td>
         </tr>
         <tr>
           <td><span>Leadership</span></td>
           <td>
-            <input type="number" value="50" id="Stat16" class="statInput align-items-center" min="1" max="99" onchange="if(this.value > 99) this.value = 99; if(this.value < 1) this.value = 1;" oninput="this.value = this.value.replace(/[^0-9]/g, '')">
+            <input type="number" value="50" id="Stat16" class="statInput align-items-center" min="3" max="99" (blur)="onRatingBlur()" onchange="if(this.value > 99) this.value = 99; if(this.value < 3) this.value = 3;" oninput="this.value = this.value.replace(/[^0-9]/g, '')">
           </td>
           <td>
-            <input type="number" value="0" id="Star16" class="statInput" min="0" max="4" onchange="if(this.value > 4) this.value = 4; if(this.value < 0) this.value = 0;" oninput="this.value = this.value.replace(/[^0-9]/g, '')">
+            <input type="number" value="0" id="Star16" class="statInput" min="0" max="4" (input)="onStarInput()" (change)="onStarInput()" onchange="if(this.value > 4) this.value = 4; if(this.value < 0) this.value = 0;" oninput="this.value = this.value.replace(/[^0-9]/g, '')">
           </td>
         </tr>
         <tr>
           <td><span>Pace</span></td>
           <td>
-            <input type="number" value="50" id="Stat17" class="statInput align-items-center" min="1" max="99" onchange="if(this.value > 99) this.value = 99; if(this.value < 1) this.value = 1;" oninput="this.value = this.value.replace(/[^0-9]/g, '')">
+            <input type="number" value="50" id="Stat17" class="statInput align-items-center" min="3" max="99" (blur)="onRatingBlur()" onchange="if(this.value > 99) this.value = 99; if(this.value < 3) this.value = 3;" oninput="this.value = this.value.replace(/[^0-9]/g, '')">
           </td>
           <td>
-            <input type="number" value="0" id="Star17" class="statInput" min="0" max="4" onchange="if(this.value > 4) this.value = 4; if(this.value < 0) this.value = 0;" oninput="this.value = this.value.replace(/[^0-9]/g, '')">
+            <input type="number" value="0" id="Star17" class="statInput" min="0" max="4" (input)="onStarInput()" (change)="onStarInput()" onchange="if(this.value > 4) this.value = 4; if(this.value < 0) this.value = 0;" oninput="this.value = this.value.replace(/[^0-9]/g, '')">
           </td>
         </tr>
         <tr>
           <td><span>Passing - Long</span></td>
           <td>
-            <input type="number" value="50" id="Stat18" class="statInput align-items-center" min="1" max="99" onchange="if(this.value > 99) this.value = 99; if(this.value < 1) this.value = 1;" oninput="this.value = this.value.replace(/[^0-9]/g, '')">
+            <input type="number" value="50" id="Stat18" class="statInput align-items-center" min="3" max="99" (blur)="onRatingBlur()" onchange="if(this.value > 99) this.value = 99; if(this.value < 3) this.value = 3;" oninput="this.value = this.value.replace(/[^0-9]/g, '')">
           </td>
           <td>
-            <input type="number" value="0" id="Star18" class="statInput" min="0" max="4" onchange="if(this.value > 4) this.value = 4; if(this.value < 0) this.value = 0;" oninput="this.value = this.value.replace(/[^0-9]/g, '')">
+            <input type="number" value="0" id="Star18" class="statInput" min="0" max="4" (input)="onStarInput()" (change)="onStarInput()" onchange="if(this.value > 4) this.value = 4; if(this.value < 0) this.value = 0;" oninput="this.value = this.value.replace(/[^0-9]/g, '')">
           </td>
         </tr>
         <tr>
           <td><span>Passing - Short</span></td>
           <td>
-            <input type="number" value="50" id="Stat19" class="statInput align-items-center" min="1" max="99" onchange="if(this.value > 99) this.value = 99; if(this.value < 1) this.value = 1;" oninput="this.value = this.value.replace(/[^0-9]/g, '')">
+            <input type="number" value="50" id="Stat19" class="statInput align-items-center" min="3" max="99" (blur)="onRatingBlur()" onchange="if(this.value > 99) this.value = 99; if(this.value < 3) this.value = 3;" oninput="this.value = this.value.replace(/[^0-9]/g, '')">
           </td>
           <td>
-            <input type="number" value="0" id="Star19" class="statInput" min="0" max="4" onchange="if(this.value > 4) this.value = 4; if(this.value < 0) this.value = 0;" oninput="this.value = this.value.replace(/[^0-9]/g, '')">
+            <input type="number" value="0" id="Star19" class="statInput" min="0" max="4" (input)="onStarInput()" (change)="onStarInput()" onchange="if(this.value > 4) this.value = 4; if(this.value < 0) this.value = 0;" oninput="this.value = this.value.replace(/[^0-9]/g, '')">
+          </td>
+        </tr>
+        <tr>
+          <td><span>Positioning</span></td>
+          <td>
+            <input type="number" value="50" id="Stat20" class="statInput align-items-center" min="3" max="99" (blur)="onRatingBlur()" onchange="if(this.value > 99) this.value = 99; if(this.value < 3) this.value = 3;" oninput="this.value = this.value.replace(/[^0-9]/g, '')">
+          </td>
+          <td>
+            <input type="number" value="0" id="Star20" class="statInput" min="0" max="4" (input)="onStarInput()" (change)="onStarInput()" onchange="if(this.value > 4) this.value = 4; if(this.value < 0) this.value = 0;" oninput="this.value = this.value.replace(/[^0-9]/g, '')">
+          </td>
+        </tr>
+        <tr>
+          <td><span>Shooting - Long</span></td>
+          <td>
+            <input type="number" value="50" id="Stat21" class="statInput align-items-center" min="3" max="99" (blur)="onRatingBlur()" onchange="if(this.value > 99) this.value = 99; if(this.value < 3) this.value = 3;" oninput="this.value = this.value.replace(/[^0-9]/g, '')">
+          </td>
+          <td>
+            <input type="number" value="0" id="Star21" class="statInput" min="0" max="4" (input)="onStarInput()" (change)="onStarInput()" onchange="if(this.value > 4) this.value = 4; if(this.value < 0) this.value = 0;" oninput="this.value = this.value.replace(/[^0-9]/g, '')">
+          </td>
+        </tr>
+        <tr>
+          <td><span>Shooting - Short</span></td>
+          <td>
+            <input type="number" value="50" id="Stat22" class="statInput align-items-center" min="3" max="99" (blur)="onRatingBlur()" onchange="if(this.value > 99) this.value = 99; if(this.value < 3) this.value = 3;" oninput="this.value = this.value.replace(/[^0-9]/g, '')">
+          </td>
+          <td>
+            <input type="number" value="0" id="Star22" class="statInput" min="0" max="4" (input)="onStarInput()" (change)="onStarInput()" onchange="if(this.value > 4) this.value = 4; if(this.value < 0) this.value = 0;" oninput="this.value = this.value.replace(/[^0-9]/g, '')">
           </td>
         </tr>
         <tr>
           <td><span>Slide Tackling</span></td>
           <td>
-            <input type="number" value="50" id="Stat20" class="statInput align-items-center" min="1" max="99" onchange="if(this.value > 99) this.value = 99; if(this.value < 1) this.value = 1;" oninput="this.value = this.value.replace(/[^0-9]/g, '')">
+            <input type="number" value="50" id="Stat23" class="statInput align-items-center" min="3" max="99" (blur)="onRatingBlur()" onchange="if(this.value > 99) this.value = 99; if(this.value < 3) this.value = 3;" oninput="this.value = this.value.replace(/[^0-9]/g, '')">
           </td>
           <td>
-            <input type="number" value="0" id="Star20" class="statInput" min="0" max="4" onchange="if(this.value > 4) this.value = 4; if(this.value < 0) this.value = 0;" oninput="this.value = this.value.replace(/[^0-9]/g, '')">
+            <input type="number" value="0" id="Star23" class="statInput" min="0" max="4" (input)="onStarInput()" (change)="onStarInput()" onchange="if(this.value > 4) this.value = 4; if(this.value < 0) this.value = 0;" oninput="this.value = this.value.replace(/[^0-9]/g, '')">
+          </td>
+        </tr>
+        <tr>
+          <td><span>Stamina</span></td>
+          <td>
+            <input type="number" value="50" id="Stat24" class="statInput align-items-center" min="3" max="99" (blur)="onRatingBlur()" onchange="if(this.value > 99) this.value = 99; if(this.value < 3) this.value = 3;" oninput="this.value = this.value.replace(/[^0-9]/g, '')">
+          </td>
+          <td>
+            <input type="number" value="0" id="Star24" class="statInput" min="0" max="4" (input)="onStarInput()" (change)="onStarInput()" onchange="if(this.value > 4) this.value = 4; if(this.value < 0) this.value = 0;" oninput="this.value = this.value.replace(/[^0-9]/g, '')">
           </td>
         </tr>
         <tr>
           <td><span>Strength - Body</span></td>
           <td>
-            <input type="number" value="50" id="Stat21" class="statInput align-items-center" min="1" max="99" onchange="if(this.value > 99) this.value = 99; if(this.value < 1) this.value = 1;" oninput="this.value = this.value.replace(/[^0-9]/g, '')">
+            <input type="number" value="50" id="Stat25" class="statInput align-items-center" min="3" max="99" (blur)="onRatingBlur()" onchange="if(this.value > 99) this.value = 99; if(this.value < 3) this.value = 3;" oninput="this.value = this.value.replace(/[^0-9]/g, '')">
           </td>
           <td>
-            <input type="number" value="0" id="Star21" class="statInput" min="0" max="4" onchange="if(this.value > 4) this.value = 4; if(this.value < 0) this.value = 0;" oninput="this.value = this.value.replace(/[^0-9]/g, '')">
+            <input type="number" value="0" id="Star25" class="statInput" min="0" max="4" (input)="onStarInput()" (change)="onStarInput()" onchange="if(this.value > 4) this.value = 4; if(this.value < 0) this.value = 0;" oninput="this.value = this.value.replace(/[^0-9]/g, '')">
           </td>
         </tr>
         <tr>
           <td><span>Strength - Leg</span></td>
           <td>
-            <input type="number" value="50" id="Stat22" class="statInput align-items-center" min="1" max="99" onchange="if(this.value > 99) this.value = 99; if(this.value < 1) this.value = 1;" oninput="this.value = this.value.replace(/[^0-9]/g, '')">
+            <input type="number" value="50" id="Stat26" class="statInput align-items-center" min="3" max="99" (blur)="onRatingBlur()" onchange="if(this.value > 99) this.value = 99; if(this.value < 3) this.value = 3;" oninput="this.value = this.value.replace(/[^0-9]/g, '')">
           </td>
           <td>
-            <input type="number" value="0" id="Star22" class="statInput" min="0" max="4" onchange="if(this.value > 4) this.value = 4; if(this.value < 0) this.value = 0;" oninput="this.value = this.value.replace(/[^0-9]/g, '')">
+            <input type="number" value="0" id="Star26" class="statInput" min="0" max="4" (input)="onStarInput()" (change)="onStarInput()" onchange="if(this.value > 4) this.value = 4; if(this.value < 0) this.value = 0;" oninput="this.value = this.value.replace(/[^0-9]/g, '')">
           </td>
         </tr>
         <tr>
           <td><span>Tackling</span></td>
           <td>
-            <input type="number" value="50" id="Stat23" class="statInput align-items-center" min="1" max="99" onchange="if(this.value > 99) this.value = 99; if(this.value < 1) this.value = 1;" oninput="this.value = this.value.replace(/[^0-9]/g, '')">
+            <input type="number" value="50" id="Stat27" class="statInput align-items-center" min="3" max="99" (blur)="onRatingBlur()" onchange="if(this.value > 99) this.value = 99; if(this.value < 3) this.value = 3;" oninput="this.value = this.value.replace(/[^0-9]/g, '')">
           </td>
           <td>
-            <input type="number" value="0" id="Star23" class="statInput" min="0" max="4" onchange="if(this.value > 4) this.value = 4; if(this.value < 0) this.value = 0;" oninput="this.value = this.value.replace(/[^0-9]/g, '')">
+            <input type="number" value="0" id="Star27" class="statInput" min="0" max="4" (input)="onStarInput()" (change)="onStarInput()" onchange="if(this.value > 4) this.value = 4; if(this.value < 0) this.value = 0;" oninput="this.value = this.value.replace(/[^0-9]/g, '')">
           </td>
         </tr>
         <tr>
           <td><span>Technique</span></td>
           <td>
-            <input type="number" value="50" id="Stat24" class="statInput align-items-center" min="1" max="99" onchange="if(this.value > 99) this.value = 99; if(this.value < 1) this.value = 1;" oninput="this.value = this.value.replace(/[^0-9]/g, '')">
+            <input type="number" value="50" id="Stat28" class="statInput align-items-center" min="3" max="99" (blur)="onRatingBlur()" onchange="if(this.value > 99) this.value = 99; if(this.value < 3) this.value = 3;" oninput="this.value = this.value.replace(/[^0-9]/g, '')">
           </td>
           <td>
-            <input type="number" value="0" id="Star24" class="statInput" min="0" max="4" onchange="if(this.value > 4) this.value = 4; if(this.value < 0) this.value = 0;" oninput="this.value = this.value.replace(/[^0-9]/g, '')">
+            <input type="number" value="0" id="Star28" class="statInput" min="0" max="4" (input)="onStarInput()" (change)="onStarInput()" onchange="if(this.value > 4) this.value = 4; if(this.value < 0) this.value = 0;" oninput="this.value = this.value.replace(/[^0-9]/g, '')">
           </td>
         </tr>
         <tr>
           <td><span>Volleying</span></td>
           <td>
-            <input type="number" value="50" id="Stat25" class="statInput align-items-center" min="1" max="99" onchange="if(this.value > 99) this.value = 99; if(this.value < 1) this.value = 1;" oninput="this.value = this.value.replace(/[^0-9]/g, '')">
+            <input type="number" value="50" id="Stat29" class="statInput align-items-center" min="3" max="99" (blur)="onRatingBlur()" onchange="if(this.value > 99) this.value = 99; if(this.value < 3) this.value = 3;" oninput="this.value = this.value.replace(/[^0-9]/g, '')">
           </td>
           <td>
-            <input type="number" value="0" id="Star25" class="statInput" min="0" max="4" onchange="if(this.value > 4) this.value = 4; if(this.value < 0) this.value = 0;" oninput="this.value = this.value.replace(/[^0-9]/g, '')">
+            <input type="number" value="0" id="Star29" class="statInput" min="0" max="4" (input)="onStarInput()" (change)="onStarInput()" onchange="if(this.value > 4) this.value = 4; if(this.value < 0) this.value = 0;" oninput="this.value = this.value.replace(/[^0-9]/g, '')">
           </td>
         </tr>
         </tbody>

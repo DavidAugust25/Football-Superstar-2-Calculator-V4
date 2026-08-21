@@ -1,0 +1,11 @@
+.green-screen-column {
+  color: #000 !important;
+}
+
+tr:nth-child(odd) th.green-screen-column {
+  background-color: var(--green-row-odd) !important;
+}
+
+tr:nth-child(even) th.green-screen-column {
+  background-color: var(--green-row-even) !important;
+}

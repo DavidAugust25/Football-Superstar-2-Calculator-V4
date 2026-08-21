@@ -1,0 +1,50 @@
+table {
+  border-collapse: collapse;
+}
+
+.border-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: var(--table-font-size);
+}
+
+.border-table tr,
+.border-table th,
+.border-table td,
+.border-table span,
+.border-table select {
+  line-height: var(--table-line-height);
+}
+
+.w-header th {
+  line-height: 100%;
+  text-align: center;
+}
+
+.min-w-250 select {
+  outline: var(--dark-grey);
+  width: 100%;
+  height: 100%;
+  border-collapse: collapse;
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 600;
+  font-size: var(--table-font-size);
+}
+
+.min-w-250 th,
+.min-w-250 td {
+  text-align: center;
+  border: 1px solid var(--dark-grey);
+  box-sizing: border-box;
+}
+
+.min-w-250 input[type='number'] {
+  width: 100%;
+  box-sizing: border-box;
+  text-align: center;
+  font-size: var(--table-font-size);
+  font-family: 'Roboto', sans-serif;
+  font-weight: 600;
+  color: var(--dark-grey);
+}

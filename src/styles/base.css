@@ -1,0 +1,48 @@
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+html,
+body {
+  height: 100%;
+  display: block;
+  overflow: hidden;
+  font-size: 14px;
+  cursor:
+    url('/Character/Misc/tap-cursor.png') 16 16,
+    pointer;
+}
+
+input,
+select {
+  cursor:
+    url('/Character/Misc/tap-cursor.png') 16 16,
+    pointer;
+}
+
+header,
+main,
+footer {
+  font-family: 'Roboto', sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-variation-settings: 'wdth' 100;
+  background-color: var(--bg-green);
+}
+
+a {
+  color: var(--light-grey) !important;
+  user-select: none;
+}
+a:link {
+  text-decoration: none;
+}
+a:hover {
+  color: var(--accent-yellow) !important;
+}
+
+span#littlefont {
+  font-size: 0.7rem !important;
+}
